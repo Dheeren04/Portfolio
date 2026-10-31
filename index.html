@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Harshitha A | Data Analytics & Python Developer, Bengaluru</title>
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Portfolio of Harshitha A — Information Science student in Bengaluru specializing in Python development, data analytics, databases, and secure software engineering." />
+    <meta name="keywords" content="Harshitha A, Data Analytics, Python Developer, Information Science, Databases, SQL, Bengaluru, Nagarjuna College of Engineering" />
+    <meta name="author" content="Harshitha A" />
+    <link rel="canonical" href="https://harshitha31-portfolio.netlify.app/" />
+    <meta name="theme-color" content="#0F0D1A" media="(prefers-color-scheme: dark)" />
+    <meta name="theme-color" content="#FAF8FF" media="(prefers-color-scheme: light)" />
+    <meta name="theme-color" content="#0F0D1A" />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://harshitha31-portfolio.netlify.app/" />
+    <meta property="og:title" content="Harshitha A | Data Analytics & Python Developer, Bengaluru" />
+    <meta property="og:description" content="Information Science student specializing in Python development, data analytics, databases, and building reliable, secure software." />
+    <meta property="og:image" content="https://harshitha31-portfolio.netlify.app/og-image.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:type" content="image/png" />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:url" content="https://harshitha31-portfolio.netlify.app/" />
+    <meta name="twitter:title" content="Harshitha A | Data Analytics & Python Developer, Bengaluru" />
+    <meta name="twitter:description" content="Information Science student specializing in Python development, data analytics, databases, and building reliable, secure software." />
+    <meta name="twitter:image" content="https://harshitha31-portfolio.netlify.app/og-image.png" />
+
+    <!-- Favicon & Touch Icons -->
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+
+    <!-- Structured Data (JSON-LD Person Schema) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Harshitha A",
+      "jobTitle": "Information Science Student",
+      "url": "https://harshitha31-portfolio.netlify.app/",
+      "image": "https://harshitha31-portfolio.netlify.app/og-image.png",
+      "alumniOf": {
+        "@type": "CollegeOrUniversity",
+        "name": "Nagarjuna College of Engineering & Technology"
+      },
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Bengaluru",
+        "addressRegion": "Karnataka",
+        "addressCountry": "India"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/in/harshitha-a-19b110374"
+      ],
+      "knowsAbout": [
+        "Python",
+        "Data Analytics",
+        "Databases",
+        "SQL",
+        "Information Science",
+        "Secure Software Engineering"
+      ]
+    }
+    </script>
+
+    <!-- Google Fonts: Fraunces, Instrument Serif & Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..700;1,9..144,300..700&family=Instrument+Serif:ital@0;1&family=Inter:ital,opsz,wght@0,14..32,300..700;1,14..32,300..700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Theme initialization (prevents FOUC) -->
+    <script>
+      (function () {
+        try {
+          var saved = localStorage.getItem('theme');
+          var systemDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+          var isDark = saved === 'dark' || (!saved && systemDark);
+          if (isDark) {
+            document.documentElement.classList.add('dark');
+            document.documentElement.style.colorScheme = 'dark';
+          } else {
+            document.documentElement.classList.remove('dark');
+            document.documentElement.style.colorScheme = 'light';
+          }
+        } catch (e) {
+          // Gracefully fallback to default
+        }
+      })();
+    </script>
+  </head>
+  <body class="min-h-screen bg-[var(--bg)] text-[var(--text)] antialiased transition-colors duration-200 selection:bg-[var(--accent)]/20 selection:text-[var(--text)]">
+    <!-- Netlify Bot Form Discovery Tag for React SPAs -->
+    <form name="contact" netlify netlify-honeypot="bot-field" hidden>
+      <input type="text" name="name" />
+      <input type="email" name="email" />
+      <textarea name="message"></textarea>
+    </form>
+
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>

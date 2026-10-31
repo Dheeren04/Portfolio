@@ -1,0 +1,141 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@layer base {
+  :root {
+    --bg: #FAF8FF;
+    --surface: #FFFFFF;
+    --surface-elevated: #F5F3FF;
+    --surface-hover: #EDE9FE;
+    --border: rgba(15, 13, 26, 0.08);
+    --border-hover: rgba(124, 92, 230, 0.4);
+    --text: #1A1730;
+    --text-muted: #6B6690;
+    --text-subtle: #8A85B0;
+    --accent: #7C5CE6;
+    --accent-hover: #6A49D1;
+    --accent-secondary: #F472B6;
+    --accent-light: rgba(124, 92, 230, 0.1);
+    --accent-glow: rgba(124, 92, 230, 0.15);
+    --ring: rgba(124, 92, 230, 0.25);
+    --shadow-soft: 0 4px 20px -2px rgba(26, 23, 48, 0.05), 0 2px 6px -1px rgba(26, 23, 48, 0.02);
+    --shadow-card: 0 10px 30px -4px rgba(26, 23, 48, 0.07);
+    
+    color-scheme: light;
+  }
+
+  .dark {
+    --bg: #0F0D1A;
+    --surface: #1A1730;
+    --surface-elevated: #1F1B3A;
+    --surface-hover: #221E3F;
+    --border: rgba(255, 255, 255, 0.08);
+    --border-hover: rgba(167, 139, 250, 0.4);
+    --text: #F5F3FF;
+    --text-muted: #A8A3C7;
+    --text-subtle: #807A9E;
+    --accent: #A78BFA;
+    --accent-hover: #C4B5FD;
+    --accent-secondary: #F9A8D4;
+    --accent-light: rgba(167, 139, 250, 0.12);
+    --accent-glow: rgba(167, 139, 250, 0.15);
+    --ring: rgba(167, 139, 250, 0.3);
+    --shadow-soft: 0 4px 20px -2px rgba(0, 0, 0, 0.4);
+    --shadow-card: 0 12px 36px -4px rgba(0, 0, 0, 0.5);
+
+    color-scheme: dark;
+  }
+
+  * {
+    border-color: var(--border);
+  }
+
+  html {
+    scroll-behavior: smooth;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  }
+
+  body {
+    background-color: var(--bg);
+    color: var(--text);
+    overflow-x: hidden;
+  }
+
+  ::selection {
+    background-color: rgba(167, 139, 250, 0.25);
+    color: inherit;
+  }
+}
+
+.font-serif-heading {
+  font-family: 'Fraunces', 'Instrument Serif', Georgia, serif;
+}
+
+.font-display {
+  font-family: 'Instrument Serif', 'Fraunces', Georgia, serif;
+}
+
+.font-sans-body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+/* Glassmorphism utilities */
+.glass-nav {
+  background-color: color-mix(in srgb, var(--surface) 70%, transparent);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: var(--bg);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--border);
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--accent);
+}
+
+/* Respect reduced motion preference */
+@media (prefers-reduced-motion: reduce) {
+  *, ::before, ::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Visible keyboard focus style for accessibility (WCAG 2.4.7 Focus Visible) */
+:focus-visible {
+  outline: 2px solid var(--accent) !important;
+  outline-offset: 3px !important;
+}
+
+/* Prevent Netlify fixed badge overlap */
+.netlify-badge,
+#netlify-badge,
+[data-netlify-badge],
+iframe[src*="netlify"],
+a[href*="netlify.com"][class*="badge"],
+div[class*="netlify-badge"] {
+  display: none !important;
+  visibility: hidden !important;
+  opacity: 0 !important;
+  pointer-events: none !important;
+  clip: rect(0, 0, 0, 0) !important;
+  clip-path: inset(50%) !important;
+  height: 0 !important;
+  width: 0 !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  border: 0 !important;
+  overflow: hidden !important;
+  position: absolute !important;
+}
